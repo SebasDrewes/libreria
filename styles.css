@@ -5,6 +5,17 @@ body {
     background-color: rgb(235, 231, 231);
     font-family:'arial';
 }
-.libro {
+.libreria {
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 5%;
+}
+.libroAgregado {
+    width: 100%;
+    text-align: center;
+    background-color: black;
+    font-size: 30px;
     color: red;
+    border: 2px solid rgb(255, 0, 0);
+    border-radius: 5px;
 }
