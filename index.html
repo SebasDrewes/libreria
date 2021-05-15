@@ -9,9 +9,21 @@
   </head>
   <body>
   <h1 class="titulo">Libreria</h1>
-  <button class="nuevoLibro">+Agregar Libro</button>
+  <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;displayForm</span>
   <div class="libreria">
   </div>
+</div>
+<div id="myNav" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div class="overlay-content">
+    <input type="text" placeholder="Titulo" class="newBook" required>
+    <input type="text" placeholder="Autor" class="newAuthor" required>
+    <input type="number" placeholder="Numero de paginas" class="newPages" required>
+    <input type="checkbox" class="newRead"> Leido?
+    <button class="nuevoLibro">+Agregar Libro</button>
+  </div>
+</div>
+
 <script src="javascript.js"></script>
 </body>
 </html>

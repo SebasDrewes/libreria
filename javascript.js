@@ -5,7 +5,11 @@ const autor = document.querySelector(".autor")
 const paginas = document.querySelector(".paginas")
 const read = document.querySelector(".read")
 const libreria = document.querySelector(".libreria")
-
+const displayForm = document.querySelector(".displayForm")
+const newBok = document.querySelector(".newBook")
+const newAutor = document.querySelector(".newAuthor")
+const newPages = document.querySelector(".newPages")
+const newRead = document.querySelector(".newRead")
 function Book(title, author, pages, read) {
     this.title = title 
     this.author = `de ${author}`
@@ -18,23 +22,28 @@ function Book(title, author, pages, read) {
             }
         }
         displayBooks()
-    this.readStatus = function () {
-        
-    }
-    
 }}
 
 function addBookToLibrary(){
-    let newTitle = prompt("Titulo?");
-    let newAuthor = prompt("Autor?");
-    let pages = prompt("Numero de paginas");
-    let read = prompt("Leido?");
+    let newTitle = newBok.value
+    let newAuthor = newAutor.value
+    let pages = newPages.value
+    let read = newRead.checked
+    if (read === true) {
+        read = "Leido"
+    } else {
+        read = "No Leido"
+    }
+    if (newTitle === "" || newAuthor === "" || pages === "") {
+        alert ("Faltan agregar datos")
+    }else{
     let newBook = new Book(newTitle,newAuthor,pages,read);
-    newBook.prototype = Object.create(Book.prototype);
     myLibrary.push(newBook);
     displayBooks();
+    closeNav()
+    }
 }
-//https://stackoverflow.com/questions/39155810/displaying-an-object-within-an-array-through-dom
+
 function displayBooks() {
     //borra todos los libros anteriores para hacer todos nuevamente
     while (libreria.firstChild) {
@@ -77,6 +86,12 @@ function displayBooks() {
         
     }
 }
+//https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_popup_form
+function form(){
+    const queryForm = document.createElement('div');
+    queryForm.classList.add("queryForm");
+    libreria.appendChild(queryForm)
+}
 const theHobbit = new Book("The Hobbit", "J.R.R Tolkien", 295, "Leido")
 const harryPotter = new Book("Harry Potter", "J.K Rollin", 255, "Leido")
 let myLibrary = [theHobbit, harryPotter];
@@ -85,3 +100,16 @@ nuevoLibro.addEventListener('click', () => {
     addBookToLibrary()
 })
     
+
+
+function openNav() {
+    document.getElementById("myNav").style.height = "100%";
+    newBok.value = "";
+    newAutor.value = "";
+    newPages.value = "";
+    newRead.checked = false;
+  }
+  
+  function closeNav() {
+    document.getElementById("myNav").style.height = "0%";
+  }
