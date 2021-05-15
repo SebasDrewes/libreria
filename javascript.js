@@ -15,14 +15,21 @@ function Book(title, author, pages, read) {
     this.author = `de ${author}`
     this.pages = `${pages} paginas`
     this.read = read;
-    this.remove = function() {
+ /*   Book.prototype.changeRead = function() {
+        if (this.read === "Leido") {
+            this.read = "No Leido"
+        }else {
+            this.read = "Leido"
+        }
+    }
+    Book.prototype.remove = function() {
         for (let i=0; i<myLibrary.length; i++) {
             if (myLibrary[i] === this) {
                 myLibrary.splice(i, 1)
             }
         }
-        displayBooks()
-}}
+        displayBooks()*/
+}
 
 function addBookToLibrary(){
     let newTitle = newBok.value
@@ -39,13 +46,26 @@ function addBookToLibrary(){
     }else{
     let newBook = new Book(newTitle,newAuthor,pages,read);
     myLibrary.push(newBook);
+    saveLibrary()
     displayBooks();
     closeNav()
     }
 }
+function saveLibrary() {
+localStorage.setItem("myLibrary",JSON.stringify(myLibrary))
+}
+function loadLibrary() {
+    let storedLibrary = localStorage.getItem("myLibrary");
+    myLibrary = JSON.parse(storedLibrary);
+}
+
+function removeNull(array) {
+    return array.filter(x => x !== null)
+    };
 
 function displayBooks() {
     //borra todos los libros anteriores para hacer todos nuevamente
+    loadLibrary()
     while (libreria.firstChild) {
         libreria.removeChild(libreria.firstChild);
     }
@@ -71,11 +91,15 @@ function displayBooks() {
                 myLibrary[i].read = "Leido"
             }
             readAgregado.textContent = myLibrary[i].read;
+            saveLibrary()
         })
         const removeAgregado= document.createElement('button');
         removeAgregado.classList.add("removeAgregado");
         removeAgregado.addEventListener('click', () => {
-            myLibrary[i].remove();
+                delete myLibrary[i]
+                myLibrary = removeNull(myLibrary)
+                saveLibrary()
+        displayBooks()
         })
         libreria.appendChild(libroAgregado);
         libroAgregado.appendChild(tituloAgregado);
@@ -83,7 +107,6 @@ function displayBooks() {
         libroAgregado.appendChild(paginasAgregado);
         libroAgregado.appendChild(readAgregado);
         libroAgregado.appendChild(removeAgregado);
-        
     }
 }
 //https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_popup_form
