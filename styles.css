@@ -1,11 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Cinzel&display=swap');
 * {
     box-sizing: border-box;
 }
 body {
-    background-color: rgb(235, 231, 231);
-    font-family:'arial';
+    background-color: rgb(202, 229, 231);
+    margin: 0;
+}
+.titulo {
+    text-align: center;
+    margin: auto;
+    padding: 2%;
+    border-bottom: solid 2px;
+    font-size: 75px;
+    font-family: 'Cinzel';
+    background-color:rgba(240, 157, 157, 0.8);
+}
+.agregarLibro {
+    text-align: center;
+    margin-top: 0;
+    min-width: 10%;
+    border-bottom: solid 2px;
+    background-color: rgb(190, 252, 190);
+    font-size: 25px;
+    font-family: 'Cinzel';
+    cursor: pointer;
 }
 .libreria {
+    font-family:'Architects Daughter';
     display:grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 5%;
@@ -13,62 +34,52 @@ body {
 .libroAgregado {
     width: 100%;
     text-align: center;
-    /*background-image: url(img/gettyimages-155369449-612x612.jpg);
-    filter: grayscale(75%) blur(1px);*/
     font-size: 30px;
-    color: red;
-    border: 2px solid rgb(255, 0, 0);
+    background: linear-gradient(to bottom right, rgb(158, 158, 255), rgb(215, 249, 250));
+    color: black;
+    border: 2px solid rgb(0, 0, 0);
     border-radius: 5px;
 }
 
 
 .overlay {
-    margin: center;
-    height: 0%;
-    width: 50%;
     position: fixed;
+    height: 0%;
+    width: 30%;
     z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: rgba(0, 38, 255, 0.5);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(119, 205, 255, 0.5);
     overflow-y: hidden;
     transition: 0.5s;
-  }
+}
   
-  .overlay-content {
+.overlay-content {
     position: relative;
     top: 25%;
     width: 100%;
     text-align: center;
     margin-top: 30px;
-  }
+}
   
-  .overlay a {
+.overlay a {
     padding: 8px;
     text-decoration: none;
     font-size: 36px;
     color: #818181;
     display: block;
     transition: 0.3s;
-  }
+}
   
-  .overlay a:hover, .overlay a:focus {
+.overlay a:hover, .overlay a:focus {
     color: #f1f1f1;
-  }
+}
   
-  .overlay .closebtn {
+.overlay .closebtn {
     position: absolute;
     top: 20px;
     right: 45px;
     font-size: 60px;
-  }
+}
   
-  @media screen and (max-height: 450px) {
-    .overlay {overflow-y: auto;}
-    .overlay a {font-size: 20px}
-    .overlay .closebtn {
-    font-size: 40px;
-    top: 15px;
-    right: 35px;
-    }
-  }
