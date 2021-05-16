@@ -26,12 +26,7 @@ function addBookToLibrary(){
     let newTitle = newBok.value
     let newAuthor = newAutor.value
     let pages = newPages.value
-    let read = newRead.checked
-    if (read === true) {
-        read = "Leido"
-    } else {
-        read = "No Leido"
-    }
+    let read = newRead.textContent
     if (newTitle === "" || newAuthor === "" || pages === "") {
         alert ("Faltan agregar datos")
     }else{
@@ -108,16 +103,29 @@ function displayBooks() {
 }
 //funcionalidad de pop up para agregar nuevo libro
 function openNav() {
-    document.getElementById("myNav").style.height = "100%";
+    document.getElementById("myNav").style.height = "100vh";
+    document.getElementById("myNav").style.width = "100vw";
     newBok.value = "";
     newAutor.value = "";
     newPages.value = "";
     newRead.checked = false;
+    newRead.textContent = "No Leido"
 }
   
 function closeNav() {
     document.getElementById("myNav").style.height = "0%";
+    document.getElementById("myNav").style.width = "0%";
 }
 nuevoLibro.addEventListener('click', () => {
     addBookToLibrary()
+})
+
+newRead.addEventListener('click', () => {
+    if (newRead.textContent === "Leido") {
+        newRead.textContent = "No Leido"
+        newRead.style.cssText = "background: linear-gradient(to bottom right, rgba(248, 146, 146, 0.9), rgba(250, 215, 215, 0.8))";
+    }else {
+        newRead.textContent = "Leido";
+        newRead.style.cssText = "background: linear-gradient(to bottom right, rgba(163, 248, 146, 0.9), rgba(216, 250, 215, 0.8))";
+    }
 })

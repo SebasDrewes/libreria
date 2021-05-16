@@ -8,32 +8,25 @@
     <title>Libreria</title>
   </head>
   <body>
-  <h1 class="titulo">Bibloteca Virtual</h1>
+  <h1 class="titulo">Biblioteca Virtual</h1>
   <h2 class="agregarLibro" onclick="openNav()">Agregar Libro</h2>
   <div id="myNav" class="overlay">
-    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
     <div class="overlay-content">
-      <input type="text" placeholder="Titulo" class="newBook" required>
-      <input type="text" placeholder="Autor" class="newAuthor" required>
-      <input type="number" placeholder="Numero de paginas" class="newPages" required>
-      <input type="checkbox" class="newRead"> Leido?
+      <p class="newTitle">Agregar nuevo libro</p>
+      <input type="text" placeholder="Titulo" class="newBook">
+      <p class="faltaTitulo">&#10229;Falta agregar Titulo</p>
+      <input type="text" placeholder="Autor" class="newAuthor">
+      <p class="faltaAuthor">Falta agregar Autor &#10230;</p>
+      <input type="number" placeholder="Numero de paginas" class="newPages">
+      <p class="faltaPaginas">&#10229;Falta agregar N de Paginas</p>
+      <p class="newRead">No Leido</p>
       <button class="nuevoLibro">+Agregar Libro</button>
+      <button class="cancel" onclick="closeNav()">Cancelar</button>
     </div>
   </div>
   <div class="libreria">
   </div>
 </div>
-<div id="myNav" class="overlay">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <div class="overlay-content">
-    <input type="text" placeholder="Titulo" class="newBook" required>
-    <input type="text" placeholder="Autor" class="newAuthor" required>
-    <input type="number" placeholder="Numero de paginas" class="newPages" required>
-    <input type="checkbox" class="newRead"> Leido?
-    <button class="nuevoLibro">+Agregar Libro</button>
-  </div>
-</div>
-
 <script src="javascript.js"></script>
 </body>
 </html>

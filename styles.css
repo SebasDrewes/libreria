@@ -11,14 +11,16 @@ body {
     margin: auto;
     padding: 2%;
     border-bottom: solid 2px;
-    font-size: 75px;
+    font-size: 10vh;
     font-family: 'Cinzel';
-    background-color:rgba(240, 157, 157, 0.8);
+    background-color:rgb(241 207 255 / 80%)
 }
 .agregarLibro {
     text-align: center;
     margin-top: 0;
-    min-width: 10%;
+    width: 100%;
+    height: 8vh;
+    padding-top: 1.5vh;
     border-bottom: solid 2px;
     background-color: rgb(190, 252, 190);
     font-size: 25px;
@@ -50,36 +52,121 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: rgba(119, 205, 255, 0.5);
+    background: linear-gradient(to bottom right, rgb(158, 158, 255, 1), rgb(215, 249, 250, 0.9));
     overflow-y: hidden;
-    transition: 0.5s;
+    transition: 0.3s;
+
 }
   
 .overlay-content {
-    position: relative;
-    top: 25%;
-    width: 100%;
     text-align: center;
-    margin-top: 30px;
+    display:grid;
+    grid-gap: 8%;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+       "newTitle newTitle newTitle"
+       ". newBook faltaTitulo"
+       "faltaAuthor newAuthor ."
+       ". newPages faltaPaginas"
+       ". newRead ."
+       "nuevoLibro . cancel"
 }
   
 .overlay a {
     padding: 8px;
     text-decoration: none;
     font-size: 36px;
-    color: #818181;
+    color: #000000;
     display: block;
     transition: 0.3s;
 }
-  
+
 .overlay a:hover, .overlay a:focus {
     color: #f1f1f1;
 }
-  
-.overlay .closebtn {
-    position: absolute;
-    top: 20px;
-    right: 45px;
-    font-size: 60px;
+
+.newTitle {
+    grid-area: newTitle;
+    font-size: 5vw;
+    margin-bottom: 0;
+    font-family: 'Cinzel';
+    border-top: solid 2px;
+    border-bottom: solid 2px;
+    background: linear-gradient(to bottom right, rgba(158, 255, 171, 0.9), rgba(215, 250, 235, 0.8));
 }
-  
+.newBook {
+    grid-area: newBook;
+    font-family:'Architects Daughter';
+    font-size: 2vw;
+    border: solid 2px;
+    border-radius: 5px;
+    border-color: rgb(0, 0, 0);
+}
+.newAuthor {
+    grid-area: newAuthor;
+    font-family:'Architects Daughter';
+    font-size: 2vw;
+    border: solid 2px;
+    border-radius: 5px;
+    border-color: rgb(0, 0, 0);
+}
+.newPages {
+    grid-area: newPages;
+    font-family:'Architects Daughter';
+    font-size: 2vw;
+    border: solid 2px;
+    border-radius: 5px;
+    border-color: rgb(0, 0, 0);
+
+}
+
+.newRead {
+    grid-area: newRead;
+    font-family:'Architects Daughter';
+    font-size: 2vw;
+    border: solid 2px;
+    border-radius: 5px;
+    cursor: pointer;
+    background: linear-gradient(to bottom right, rgba(248, 146, 146, 0.9), rgba(250, 215, 215, 0.8));
+}
+
+.nuevoLibro {
+    grid-area: nuevoLibro;
+    font-family:'Architects Daughter';
+    font-size: 2vw;
+    border-radius: 5px;
+    margin: 1vw;
+    cursor: pointer;
+    background: linear-gradient(to bottom right, rgba(163, 248, 146, 0.9), rgba(216, 250, 215, 0.8));
+}
+.cancel {
+    grid-area: cancel;
+    font-family:'Architects Daughter';
+    font-size: 2vw;
+    border-radius: 5px;
+    margin: 1vw;
+    cursor: pointer;
+    background: linear-gradient(to bottom right, rgba(248, 146, 146, 0.9), rgba(250, 215, 215, 0.8))
+}
+.faltaTitulo {
+    grid-area: faltaTitulo;
+    font-family:'Architects Daughter';
+    margin: 0;
+    color: red;
+    font-size: 2vw;
+}
+.faltaAuthor {
+    grid-area: faltaAuthor;
+    font-family:'Architects Daughter';
+    color: red;
+    font-size: 2vw;
+    margin: 0;
+}
+.faltaPaginas {
+    grid-area: faltaPaginas;
+    font-family:'Architects Daughter';
+    color: red;
+    font-size: 2vw;
+    margin: 0;
+}
