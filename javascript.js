@@ -5,6 +5,9 @@ const newBok = document.querySelector(".newBook")
 const newAutor = document.querySelector(".newAuthor")
 const newPages = document.querySelector(".newPages")
 const newRead = document.querySelector(".newRead")
+const faltaTitulo = document.querySelector(".faltaTitulo")
+const faltaAuthor = document.querySelector(".faltaAuthor")
+const faltaPaginas = document.querySelector(".faltaPaginas")
 
 //libros test
 const theHobbit = new Book("The Hobbit", "J.R.R Tolkien", 295, "Leido")
@@ -27,8 +30,29 @@ function addBookToLibrary(){
     let newAuthor = newAutor.value
     let pages = newPages.value
     let read = newRead.textContent
-    if (newTitle === "" || newAuthor === "" || pages === "") {
-        alert ("Faltan agregar datos")
+    if (newTitle === "" ) {
+        faltaTitulo.style.cssText = "visibility: visible";
+        newBok.style.cssText = "border-color: rgb(255, 0, 0)";
+        setTimeout(function(){
+            faltaTitulo.style.cssText = "visibility: hidden";
+            newBok.style.cssText = "border-color: rgb(0, 0, 0)";
+        },3000);
+    }
+    if (newAuthor === "" ) {
+        faltaAuthor.style.cssText = "visibility: visible";
+        newAutor.style.cssText = "border-color: rgb(255, 0, 0)";
+        setTimeout(function(){
+            faltaAuthor.style.cssText = "visibility: hidden";
+            newAutor.style.cssText = "border-color: rgb(0, 0, 0)";
+        },3000);
+    }
+    if (pages === "" ) {
+        faltaPaginas.style.cssText = "visibility: visible";
+        newPages.style.cssText = "border-color: rgb(255, 0, 0)";
+        setTimeout(function(){
+            faltaPaginas.style.cssText = "visibility: hidden";
+            newPages.style.cssText = "border-color: rgb(0, 0, 0)";
+        },3000);
     }else{
     let newBook = new Book(newTitle,newAuthor,pages,read);
     myLibrary.push(newBook);

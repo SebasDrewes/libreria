@@ -153,6 +153,7 @@ body {
 }
 .faltaTitulo {
     grid-area: faltaTitulo;
+    visibility: hidden;
     font-family:'Architects Daughter';
     margin: 0;
     color: red;
@@ -160,6 +161,7 @@ body {
 }
 .faltaAuthor {
     grid-area: faltaAuthor;
+    visibility: hidden;
     font-family:'Architects Daughter';
     color: red;
     font-size: 2vw;
@@ -167,6 +169,7 @@ body {
 }
 .faltaPaginas {
     grid-area: faltaPaginas;
+    visibility: hidden;
     font-family:'Architects Daughter';
     color: red;
     font-size: 2vw;
