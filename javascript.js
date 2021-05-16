@@ -53,7 +53,7 @@ function addBookToLibrary(){
             faltaPaginas.style.cssText = "visibility: hidden";
             newPages.style.cssText = "border-color: rgb(0, 0, 0)";
         },3000);
-    }else{
+    }else if (newTitle !== "" && newAuthor !== "" && pages !== "" ){
     let newBook = new Book(newTitle,newAuthor,pages,read);
     myLibrary.push(newBook);
     saveLibrary()
@@ -98,18 +98,26 @@ function displayBooks() {
         //funcionalidad cambiar valor leido/no leido
         readAgregado.classList.add("readAgregado");
         readAgregado.textContent = myLibrary[i].read;
+        if (myLibrary[i].read === "Leido") {
+            readAgregado.style.cssText = "background: linear-gradient(to bottom right, rgba(163, 248, 146, 0.9), rgba(216, 250, 215, 0.8))";
+        } else {
+            readAgregado.style.cssText = "background: linear-gradient(to bottom right, rgba(248, 146, 146, 0.9), rgba(250, 215, 215, 0.8))";
+        }
         readAgregado.addEventListener('click', () => {
             if (myLibrary[i].read === "Leido") {
                 myLibrary[i].read = "No Leido"
+                readAgregado.style.cssText = "background: linear-gradient(to bottom right, rgba(248, 146, 146, 0.9), rgba(250, 215, 215, 0.8))";
             }else {
                 myLibrary[i].read = "Leido"
+                readAgregado.style.cssText = "background: linear-gradient(to bottom right, rgba(163, 248, 146, 0.9), rgba(216, 250, 215, 0.8))";
             }
             readAgregado.textContent = myLibrary[i].read;
             saveLibrary()
         })
         //funcionalidad elimitar libro de libreria
-        const removeAgregado= document.createElement('button');
+        const removeAgregado= document.createElement('div');
         removeAgregado.classList.add("removeAgregado");
+        removeAgregado.textContent = "Eliminar Libro";
         removeAgregado.addEventListener('click', () => {
                 delete myLibrary[i]
                 myLibrary = removeNull(myLibrary)
