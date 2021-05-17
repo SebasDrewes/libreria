@@ -146,6 +146,7 @@ function openNav() {
     newPages.value = "";
     newRead.checked = false;
     newRead.textContent = "No Leido"
+    newRead.style.cssText = "background: linear-gradient(to bottom right, rgba(248, 146, 146, 0.9), rgba(250, 215, 215, 0.8))";
 }
   
 function closeNav() {
