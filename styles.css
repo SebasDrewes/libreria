@@ -27,7 +27,7 @@ body {
     height: 8vh;
     border-bottom: solid 2px;
     border-color: black;
-    background-color: rgb(17 21 18);
+    background-color: black;
     color: rgb(255, 255, 255);
     text-shadow: -3px 0 black, 0 3px black, 3px 0 black, 0 -3px black;
     font-size: 6vh;
@@ -54,7 +54,7 @@ body {
     flex-direction: column;
     text-align: center;
     font-size: 4vh;
-    background: rgb(49 49 93);
+    background: rgb(140 140 164);
     color: rgb(255, 255, 255);
     border: 2px solid rgb(0, 0, 0);
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
@@ -64,8 +64,9 @@ body {
     font-size: 4vh;
     margin-top: auto;
     cursor: pointer;
-    background-color:  rgb(17 21 18);
+    background-color:  black;
     color: rgb(255, 255, 255);
+    border-top: solid 2px black;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 .removeAgregado {
@@ -89,7 +90,7 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background: rgba(92, 92, 92, 0.9);
+    background: rgba(92, 92, 92, 0.975);
     overflow-y: hidden;
     transition: 0.3s;
     overflow: hidden;
@@ -135,7 +136,8 @@ body {
         display: flex;
         justify-content: center;
         align-items: center;
-        font-size: 7vw!important;
+        font-weight: bolder;
+        font-size: 8vw!important;
         width: 100vw;
     }
     .newBook {
@@ -144,6 +146,7 @@ body {
         left: 10%;
         font-size: 7vw!important;
         width: 80vw;
+        height: 8%;
     }
     .newAuthor {
         position: absolute;
@@ -151,6 +154,7 @@ body {
         left: 10%;
         font-size: 7vw!important;
         width: 80vw;
+        height: 8%;
     }
     .newPages {
         position: absolute;
@@ -158,15 +162,20 @@ body {
         left: 10%;
         font-size: 7vw!important;
         width: 80vw;
+        height: 8%;
     
     }
     
     .newRead {
         position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         top: 65%;
         left: 10%;
         font-size: 7vw!important;
         width: 80vw;
+        height: 8%;
     }
     
     .nuevoLibro {
@@ -174,6 +183,7 @@ body {
         top: 85%;
         left: 2%;
         font-size: 6vw!important;
+        height: 8%;
     }
     .cancel {
         grid-area: cancel;
@@ -181,6 +191,7 @@ body {
         top: 85%;
         left: 60%;
         font-size: 6vw!important;
+        height: 8%;
     }
 
     .libreria {
@@ -196,7 +207,7 @@ body {
     border-top: solid 2px;
     border-bottom: solid 2px;
     border-color: black;
-    background-color:  rgb(17 21 18);
+    background-color:  black;
     color: rgb(255, 255, 255);
     text-shadow: -3px 0 black, 0 3px black, 3px 0 black, 0 -3px black;
 }
@@ -208,7 +219,7 @@ body {
     border-radius: 5px;
     transition: all 0.5s ease-in-out;
     color: rgb(255, 255, 255);
-    background: rgb(49 49 93);
+    background: black;
     border-color: black;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
@@ -220,7 +231,7 @@ body {
     border-radius: 5px;
     transition: all 0.5s ease-in-out;
     color: rgb(255, 255, 255);
-    background: rgb(49 49 93);
+    background: black;
     border-color: black;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
@@ -232,7 +243,7 @@ body {
     border-radius: 5px;
     transition: all 0.5s ease-in-out;
     color: rgb(255, 255, 255);
-    background: rgb(49 49 93);
+    background: black;
     border-color: black;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 
@@ -247,7 +258,7 @@ body {
     border-color: rgb(0, 0, 0);
     color: rgb(255, 255, 255);
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-    background: rgb(49 49 93);
+    background: black;
 }
 
 .nuevoLibro {
@@ -261,7 +272,7 @@ body {
     border-color: rgb(0, 0, 0);
     color: rgb(255, 255, 255);
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-    background: rgb(17 21 18);;
+    background: black;;
 }
 .cancel {
     font-family: 'Roboto';
@@ -274,26 +285,29 @@ body {
     border-color: rgb(0, 0, 0);
     color: rgb(255, 255, 255);
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-    background: rgb(17 21 18);
+    background: black;
 }
 .faltaTitulo {
     grid-area: faltaTitulo;
     visibility: hidden;
     margin: 0;
-    color: red;
     font-size: 2vw;
+    color: rgb(255, 255, 255);
+    text-shadow: -2px 0 rgb(255, 0, 0), 0 2px rgb(255, 0, 0), 2px 0 rgb(255, 0, 0), 0 -2px rgb(255, 0, 0);
 }
 .faltaAuthor {
     grid-area: faltaAuthor;
     visibility: hidden;
-    color: red;
     font-size: 2vw;
     margin: 0;
+    color: rgb(255, 255, 255);
+    text-shadow: -2px 0 rgb(255, 0, 0), 0 2px rgb(255, 0, 0), 2px 0 rgb(255, 0, 0), 0 -2px rgb(255, 0, 0);
 }
 .faltaPaginas {
     grid-area: faltaPaginas;
     visibility: hidden;
-    color: red;
     font-size: 2vw;
     margin: 0;
+    color: rgb(255, 255, 255);
+    text-shadow: -2px 0 rgb(255, 0, 0), 0 2px rgb(255, 0, 0), 2px 0 rgb(255, 0, 0), 0 -2px rgb(255, 0, 0);
 }
