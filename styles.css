@@ -101,6 +101,7 @@ body {
        ". newRead ."
        "nuevoLibro . cancel"
 }
+/*overlay en mobile */
 @media only screen and (max-width: 700px) {
     .overlay-content {
         width: 100vw;
@@ -120,102 +121,62 @@ body {
            "nuevoLibro . cancel"
     }
     .newTitle {
-        grid-area: newTitle;
         display: flex;
         justify-content: center;
         align-items: center;
         font-size: 7vw!important;
         width: 100vw;
-        margin-bottom: 0;
-        font-family: 'Roboto';
-        border-top: solid 2px;
-        border-bottom: solid 2px;
     }
     .newBook {
-        grid-area: newBook;
         position: absolute;
         top: 25%;
         left: 10%;
         font-size: 7vw!important;
         width: 80vw;
-        font-family: 'Roboto';
-        border: solid 2px;
-        border-radius: 5px;
-        border-color: rgb(0, 0, 0);
-        transition: all 0.5s ease-in-out;
     }
     .newAuthor {
-        grid-area: newAuthor;
         position: absolute;
         top: 40%;
         left: 10%;
         font-size: 7vw!important;
         width: 80vw;
-        font-family: 'Roboto';
-        border: solid 2px;
-        border-radius: 5px;
-        border-color: rgb(0, 0, 0);
-        transition: all 0.5s ease-in-out;
     }
     .newPages {
-        grid-area: newPages;
         position: absolute;
         top: 55%;
         left: 10%;
         font-size: 7vw!important;
         width: 80vw;
-        font-family: 'Roboto';
-        border: solid 2px;
-        border-radius: 5px;
-        border-color: rgb(0, 0, 0);
-        transition: all 0.5s ease-in-out;
     
     }
     
     .newRead {
-        grid-area: newRead;
         position: absolute;
         top: 65%;
         left: 10%;
         font-size: 7vw!important;
         width: 80vw;
-        border: solid 2px;
-        border-radius: 5px;
-        cursor: pointer;
-        color: white;
-        background: rgb(231, 241, 213);
     }
     
     .nuevoLibro {
-        font-family: 'Roboto';
-        grid-area: nuevoLibro;
         position: absolute;
         top: 85%;
         left: 2%;
         font-size: 6vw!important;
-        border-radius: 5px;
-        margin: 1vw;
-        cursor: pointer;
-        background: linear-gradient(to bottom right, rgba(163, 248, 146, 0.9), rgba(216, 250, 215, 0.8));
     }
     .cancel {
-        font-family: 'Roboto';
         grid-area: cancel;
         position: absolute;
         top: 85%;
         left: 60%;
         font-size: 6vw!important;
-        border-radius: 5px;
-        margin: 1vw;
-        cursor: pointer;
-        background: rgb(241, 213, 213);
     }
 
     .libreria {
         grid-template-columns: repeat(2, 1fr);
     }
 }
-
+/*display en pc*/
 .newTitle {
     grid-area: newTitle;
     font-size: 7vw;

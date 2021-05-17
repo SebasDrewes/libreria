@@ -8,12 +8,11 @@ const newRead = document.querySelector(".newRead")
 const faltaTitulo = document.querySelector(".faltaTitulo")
 const faltaAuthor = document.querySelector(".faltaAuthor")
 const faltaPaginas = document.querySelector(".faltaPaginas")
+const cancel = document.querySelector(".cancel")
+const agregarLibro = document.querySelector(".agregarLibro")
 
-//libros test
-const theHobbit = new Book("The Hobbit", "J.R.R Tolkien", 295, "Leido")
-const harryPotter = new Book("Harry Potter", "J.K Rollin", 255, "Leido")
 //definicion array de libros
-let myLibrary = [theHobbit, harryPotter];
+let myLibrary = [];
 //mostrar libros actuales
 window.onload = displayBooks();
 
@@ -58,7 +57,7 @@ function addBookToLibrary(){
     myLibrary.push(newBook);
     saveLibrary()
     displayBooks();
-    closeNav()
+    cancel.click();
     }
 }
 //funcionalidad guardar libreria en localStorage
@@ -138,21 +137,6 @@ function displayBooks() {
     }
 }
 //funcionalidad de pop up para agregar nuevo libro
-function openNav() {
-    document.getElementById("myNav").style.height = "100%";
-    document.getElementById("myNav").style.width = "100%";
-    newBok.value = "";
-    newAutor.value = "";
-    newPages.value = "";
-    newRead.checked = false;
-    newRead.textContent = "No Leido"
-    newRead.style.cssText = "background: rgb(241, 213, 213)";
-}
-  
-function closeNav() {
-    document.getElementById("myNav").style.height = "0%";
-    document.getElementById("myNav").style.width = "0%";
-}
 nuevoLibro.addEventListener('click', () => {
     addBookToLibrary()
 })
@@ -165,4 +149,18 @@ newRead.addEventListener('click', () => {
         newRead.textContent = "Leido";
         newRead.style.cssText = "background: rgb(231, 241, 213)";
     }
+})
+cancel.addEventListener('click', () => {
+    document.getElementById("myNav").style.height = "0%";
+    document.getElementById("myNav").style.width = "0%";
+})
+agregarLibro.addEventListener('click', () => {
+    document.getElementById("myNav").style.height = "100%";
+    document.getElementById("myNav").style.width = "100%";
+    newBok.value = "";
+    newAutor.value = "";
+    newPages.value = "";
+    newRead.checked = false;
+    newRead.textContent = "No Leido"
+    newRead.style.cssText = "background: rgb(241, 213, 213)";
 })
