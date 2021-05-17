@@ -102,7 +102,7 @@ function displayBooks() {
         readAgregado.classList.add("readAgregado");
         readAgregado.textContent = myLibrary[i].read;
         if (myLibrary[i].read === "Leido") {
-            readAgregado.style.cssText = "background: rgb(71 71 72);";
+            readAgregado.style.cssText = "background: rgb(49 49 93);";
         } else {
             readAgregado.style.cssText = "background: rgb(17 21 18)";
         }
@@ -112,7 +112,7 @@ function displayBooks() {
                 readAgregado.style.cssText = "background: rgb(17 21 18)";
             }else {
                 myLibrary[i].read = "Leido"
-                readAgregado.style.cssText = "background: rgb(71 71 72);";
+                readAgregado.style.cssText = "background: rgb(49 49 93);";
             }
             readAgregado.textContent = myLibrary[i].read;
             saveLibrary()
@@ -147,7 +147,7 @@ newRead.addEventListener('click', () => {
         newRead.style.cssText = "background: rgb(17 21 18)";
     }else {
         newRead.textContent = "Leido";
-        newRead.style.cssText = "background: rgb(71 71 72);";
+        newRead.style.cssText = "background: rgb(49 49 93);";
     }
 })
 cancel.addEventListener('click', () => {
