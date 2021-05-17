@@ -16,6 +16,9 @@ body {
     background: rgb(247 210 184 / 80%);
 }
 .agregarLibro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
     margin-top: 0;
     width: 100%;
@@ -23,9 +26,13 @@ body {
     padding-top: 1.5vh;
     border-bottom: solid 2px;
     background-color: rgb(190, 252, 190);
-    font-size: 25px;
+    font-size: 6vh;
     font-family: 'Cinzel';
     cursor: pointer;
+}
+.tituloAgregado {
+    font-weight: bold;
+    font-size: 6vh;
 }
 .libreria {
     max-width: 100vw;
@@ -47,7 +54,7 @@ body {
     border-radius: 5px;
 }
 .readAgregado {
-    font-size: 2vw;
+    font-size: 4vh;
     border-top: solid 2px;
     margin-top: auto;
     border-bottom: solid 2px;
@@ -56,7 +63,7 @@ body {
 }
 .removeAgregado {
     bottom: 0;
-    font-size: 2vw;
+    font-size: 3vh;
     cursor: pointer;
     background: linear-gradient(to bottom right, rgba(248, 146, 146, 0.9), rgba(250, 215, 215, 0.8));
 }
