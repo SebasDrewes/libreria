@@ -68,7 +68,11 @@ localStorage.setItem("myLibrary",JSON.stringify(myLibrary))
 //funcionalidad cargar libreria de localStorage
 function loadLibrary() {
     let storedLibrary = localStorage.getItem("myLibrary");
+    if (storedLibrary === null) {
+        myLibrary = [];
+    }else{
     myLibrary = JSON.parse(storedLibrary);
+}
 }
 //funcionalidad para filtrar libreria de nulls
 function removeNull(array) {
