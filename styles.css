@@ -3,7 +3,7 @@
     box-sizing: border-box;
 }
 body {
-    background: white;
+    background:#969292;
     font-family: 'Roboto';
     margin: 0;
 }
@@ -13,8 +13,9 @@ body {
     padding: 2vh;
     border-bottom: black solid 2px;
     font-size: 10vh;
-    color: rgb(0, 0, 0);
-    background: rgb(240, 240, 240);
+    color: rgb(255, 255, 255);
+    background: rgb(71 71 72);
+    text-shadow: -3px 0 black, 0 3px black, 3px 0 black, 0 -3px black;
 }
 .agregarLibro {
     display: flex;
@@ -25,13 +26,17 @@ body {
     width: 100%;
     height: 8vh;
     border-bottom: solid 2px;
-    background-color: rgb(231, 241, 213);
+    border-color: black;
+    background-color: rgb(17 21 18);
+    color: rgb(255, 255, 255);
+    text-shadow: -3px 0 black, 0 3px black, 3px 0 black, 0 -3px black;
     font-size: 6vh;
     font-family: 'Roboto';
     cursor: pointer;
 }
 .tituloAgregado {
     font-weight: bold;
+    text-shadow: -3px 0 black, 0 3px black, 3px 0 black, 0 -3px black;
     font-size: 6vh;
 }
 .libreria {
@@ -44,28 +49,34 @@ body {
     max-width: 100%;
     margin: 0;
     display: flex;
+    position: relative;
     word-wrap: break-word;
     flex-direction: column;
     text-align: center;
     font-size: 4vh;
-    background: rgb(240, 240, 240);
-    color: rgb(0, 0, 0);
+    background: rgb(71 71 72);
+    color: rgb(255, 255, 255);
     border: 2px solid rgb(0, 0, 0);
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
     border-radius: 5px;
 }
 .readAgregado {
     font-size: 4vh;
-    border-top: solid 2px;
     margin-top: auto;
-    border-bottom: solid 2px;
     cursor: pointer;
-    background: rgb(231, 241, 213);
+    background-color:  rgb(17 21 18);
+    color: rgb(255, 255, 255);
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 .removeAgregado {
-    bottom: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
     font-size: 3vh;
     cursor: pointer;
-    background: rgb(241, 213, 213);
+    border-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
 
@@ -78,7 +89,7 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(92, 92, 92, 0.9);
     overflow-y: hidden;
     transition: 0.3s;
     overflow: hidden;
@@ -184,7 +195,10 @@ body {
     font-family: 'Roboto';
     border-top: solid 2px;
     border-bottom: solid 2px;
-    background-color: rgb(231, 241, 213)
+    border-color: black;
+    background-color:  rgb(17 21 18);
+    color: rgb(255, 255, 255);
+    text-shadow: -3px 0 black, 0 3px black, 3px 0 black, 0 -3px black;
 }
 .newBook {
     grid-area: newBook;
@@ -193,6 +207,10 @@ body {
     border: solid 2px;
     border-radius: 5px;
     transition: all 0.5s ease-in-out;
+    color: rgb(255, 255, 255);
+    background: rgb(71 71 72);
+    border-color: black;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 .newAuthor {
     grid-area: newAuthor;
@@ -201,6 +219,10 @@ body {
     border: solid 2px;
     border-radius: 5px;
     transition: all 0.5s ease-in-out;
+    color: rgb(255, 255, 255);
+    background: rgb(71 71 72);
+    border-color: black;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 .newPages {
     grid-area: newPages;
@@ -209,6 +231,10 @@ body {
     border: solid 2px;
     border-radius: 5px;
     transition: all 0.5s ease-in-out;
+    color: rgb(255, 255, 255);
+    background: rgb(71 71 72);
+    border-color: black;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 
 }
 
@@ -218,8 +244,10 @@ body {
     border: solid 2px;
     border-radius: 5px;
     cursor: pointer;
-    color: rgb(0, 0, 0);
-    background: rgb(241, 213, 213);
+    border-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    background: rgb(109 14 14);
 }
 
 .nuevoLibro {
@@ -231,8 +259,9 @@ body {
     margin: 1vw;
     cursor: pointer;
     border-color: rgb(0, 0, 0);
-    color: rgb(0, 0, 0);
-    background: rgb(231, 241, 213);
+    color: rgb(255, 255, 255);
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    background: rgb(17 21 18);;
 }
 .cancel {
     font-family: 'Roboto';
@@ -243,8 +272,9 @@ body {
     margin: 1vw;
     cursor: pointer;
     border-color: rgb(0, 0, 0);
-    color: rgb(0, 0, 0);
-    background: rgb(241, 213, 213);
+    color: rgb(255, 255, 255);
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    background: rgb(17 21 18);
 }
 .faltaTitulo {
     grid-area: faltaTitulo;

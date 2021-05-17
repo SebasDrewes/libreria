@@ -102,17 +102,17 @@ function displayBooks() {
         readAgregado.classList.add("readAgregado");
         readAgregado.textContent = myLibrary[i].read;
         if (myLibrary[i].read === "Leido") {
-            readAgregado.style.cssText = "background: rgb(231, 241, 213)";
+            readAgregado.style.cssText = "background: rgb(71 71 72);";
         } else {
-            readAgregado.style.cssText = "background: rgb(241, 213, 213)";
+            readAgregado.style.cssText = "background: rgb(17 21 18)";
         }
         readAgregado.addEventListener('click', () => {
             if (myLibrary[i].read === "Leido") {
                 myLibrary[i].read = "No Leido"
-                readAgregado.style.cssText = "background: rgb(241, 213, 213)";
+                readAgregado.style.cssText = "background: rgb(17 21 18)";
             }else {
                 myLibrary[i].read = "Leido"
-                readAgregado.style.cssText = "background: rgb(231, 241, 213)";
+                readAgregado.style.cssText = "background: rgb(71 71 72);";
             }
             readAgregado.textContent = myLibrary[i].read;
             saveLibrary()
@@ -120,7 +120,7 @@ function displayBooks() {
         //funcionalidad elimitar libro de libreria
         const removeAgregado= document.createElement('div');
         removeAgregado.classList.add("removeAgregado");
-        removeAgregado.textContent = "Eliminar Libro";
+        removeAgregado.textContent = "X";
         removeAgregado.addEventListener('click', () => {
                 delete myLibrary[i]
                 myLibrary = removeNull(myLibrary)
@@ -144,10 +144,10 @@ nuevoLibro.addEventListener('click', () => {
 newRead.addEventListener('click', () => {
     if (newRead.textContent === "Leido") {
         newRead.textContent = "No Leido"
-        newRead.style.cssText = "background: rgb(241, 213, 213)";
+        newRead.style.cssText = "background: rgb(17 21 18)";
     }else {
         newRead.textContent = "Leido";
-        newRead.style.cssText = "background: rgb(231, 241, 213)";
+        newRead.style.cssText = "background: rgb(71 71 72);";
     }
 })
 cancel.addEventListener('click', () => {
@@ -162,5 +162,5 @@ agregarLibro.addEventListener('click', () => {
     newPages.value = "";
     newRead.checked = false;
     newRead.textContent = "No Leido"
-    newRead.style.cssText = "background: rgb(241, 213, 213)";
+    newRead.style.cssText = "background: rgb(17 21 18)";
 })
