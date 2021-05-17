@@ -203,14 +203,19 @@ body {
         grid-area: cancel;
         position: absolute;
         top: 85%;
-        left: 63%;
+        left: 60%;
         font-size: 6vw!important;
         border-radius: 5px;
         margin: 1vw;
         cursor: pointer;
         background: linear-gradient(to bottom right, rgba(248, 146, 146, 0.9), rgba(250, 215, 215, 0.8))
     }
+
+    .libreria {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
+
 .newTitle {
     grid-area: newTitle;
     font-size: 5vw;
@@ -263,6 +268,7 @@ body {
     grid-area: nuevoLibro;
     font-size: 2vw;
     border-radius: 5px;
+    border: solid 2px;
     margin: 1vw;
     cursor: pointer;
     background: linear-gradient(to bottom right, rgba(163, 248, 146, 0.9), rgba(216, 250, 215, 0.8));
@@ -272,6 +278,7 @@ body {
     grid-area: cancel;
     font-size: 2vw;
     border-radius: 5px;
+    border: solid 2px;
     margin: 1vw;
     cursor: pointer;
     background: linear-gradient(to bottom right, rgba(248, 146, 146, 0.9), rgba(250, 215, 215, 0.8))
