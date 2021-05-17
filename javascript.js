@@ -103,17 +103,17 @@ function displayBooks() {
         readAgregado.classList.add("readAgregado");
         readAgregado.textContent = myLibrary[i].read;
         if (myLibrary[i].read === "Leido") {
-            readAgregado.style.cssText = "background: linear-gradient(to bottom right, rgba(163, 248, 146, 0.9), rgba(216, 250, 215, 0.8))";
+            readAgregado.style.cssText = "background: linear-gradient(to bottom right, rgba(57, 66, 55, 0.9), rgba(0, 0, 0, 0.8))";
         } else {
-            readAgregado.style.cssText = "background: linear-gradient(to bottom right, rgba(248, 146, 146, 0.9), rgba(250, 215, 215, 0.8))";
+            readAgregado.style.cssText = "background: linear-gradient(to bottom right, rgba(70, 53, 53, 0.9), rgba(0, 0, 0, 0.8))";
         }
         readAgregado.addEventListener('click', () => {
             if (myLibrary[i].read === "Leido") {
                 myLibrary[i].read = "No Leido"
-                readAgregado.style.cssText = "background: linear-gradient(to bottom right, rgba(248, 146, 146, 0.9), rgba(250, 215, 215, 0.8))";
+                readAgregado.style.cssText = "background: linear-gradient(to bottom right, rgba(70, 53, 53, 0.9), rgba(0, 0, 0, 0.8))";
             }else {
                 myLibrary[i].read = "Leido"
-                readAgregado.style.cssText = "background: linear-gradient(to bottom right, rgba(163, 248, 146, 0.9), rgba(216, 250, 215, 0.8))";
+                readAgregado.style.cssText = "background: linear-gradient(to bottom right, rgba(57, 66, 55, 0.9), rgba(0, 0, 0, 0.8))";
             }
             readAgregado.textContent = myLibrary[i].read;
             saveLibrary()
@@ -146,7 +146,7 @@ function openNav() {
     newPages.value = "";
     newRead.checked = false;
     newRead.textContent = "No Leido"
-    newRead.style.cssText = "background: linear-gradient(to bottom right, rgba(248, 146, 146, 0.9), rgba(250, 215, 215, 0.8))";
+    newRead.style.cssText = "background: linear-gradient(to bottom right, rgba(70, 53, 53, 0.9), rgba(0, 0, 0, 0.8))";
 }
   
 function closeNav() {
@@ -160,9 +160,9 @@ nuevoLibro.addEventListener('click', () => {
 newRead.addEventListener('click', () => {
     if (newRead.textContent === "Leido") {
         newRead.textContent = "No Leido"
-        newRead.style.cssText = "background: linear-gradient(to bottom right, rgba(248, 146, 146, 0.9), rgba(250, 215, 215, 0.8))";
+        newRead.style.cssText = "background: linear-gradient(to bottom right, rgba(70, 53, 53, 0.9), rgba(0, 0, 0, 0.8))";
     }else {
         newRead.textContent = "Leido";
-        newRead.style.cssText = "background: linear-gradient(to bottom right, rgba(163, 248, 146, 0.9), rgba(216, 250, 215, 0.8))";
+        newRead.style.cssText = "background: linear-gradient(to bottom right, rgba(57, 66, 55, 0.9), rgba(0, 0, 0, 0.8))";
     }
 })
