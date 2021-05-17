@@ -74,6 +74,7 @@ body {
     background: linear-gradient(to bottom right, rgb(158, 158, 255, 1), rgb(215, 249, 250, 0.9));
     overflow-y: hidden;
     transition: 0.3s;
+    overflow: hidden;
 
 }
   
