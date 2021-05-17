@@ -94,7 +94,7 @@ body {
        ". newRead ."
        "nuevoLibro . cancel"
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 700px) {
     .overlay-content {
         width: 100vw;
         height: 100vh;
@@ -114,13 +114,94 @@ body {
     }
     .newTitle {
         grid-area: newTitle;
-        font-size: 5vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 7vw!important;
         width: 100vw;
         margin-bottom: 0;
         font-family: 'Cinzel';
         border-top: solid 2px;
         border-bottom: solid 2px;
         background: linear-gradient(to bottom right, rgba(158, 255, 171, 0.9), rgba(215, 250, 235, 0.8));
+    }
+    .newBook {
+        grid-area: newBook;
+        position: absolute;
+        top: 25%;
+        left: 10%;
+        font-size: 7vw!important;
+        width: 80vw;
+        font-family: 'Cinzel';
+        border: solid 2px;
+        border-radius: 5px;
+        border-color: rgb(0, 0, 0);
+        transition: all 0.5s ease-in-out;
+    }
+    .newAuthor {
+        grid-area: newAuthor;
+        position: absolute;
+        top: 40%;
+        left: 10%;
+        font-size: 7vw!important;
+        width: 80vw;
+        font-family: 'Cinzel';
+        border: solid 2px;
+        border-radius: 5px;
+        border-color: rgb(0, 0, 0);
+        transition: all 0.5s ease-in-out;
+    }
+    .newPages {
+        grid-area: newPages;
+        position: absolute;
+        top: 55%;
+        left: 10%;
+        font-size: 7vw!important;
+        width: 80vw;
+        font-family: 'Cinzel';
+        border: solid 2px;
+        border-radius: 5px;
+        border-color: rgb(0, 0, 0);
+        transition: all 0.5s ease-in-out;
+    
+    }
+    
+    .newRead {
+        grid-area: newRead;
+        position: absolute;
+        top: 65%;
+        left: 10%;
+        font-size: 7vw!important;
+        width: 80vw;
+        border: solid 2px;
+        border-radius: 5px;
+        cursor: pointer;
+        background: linear-gradient(to bottom right, rgba(248, 146, 146, 0.9), rgba(250, 215, 215, 0.8));
+    }
+    
+    .nuevoLibro {
+        font-family: 'Cinzel';
+        grid-area: nuevoLibro;
+        position: absolute;
+        top: 85%;
+        left: 2%;
+        font-size: 6vw!important;
+        border-radius: 5px;
+        margin: 1vw;
+        cursor: pointer;
+        background: linear-gradient(to bottom right, rgba(163, 248, 146, 0.9), rgba(216, 250, 215, 0.8));
+    }
+    .cancel {
+        font-family: 'Cinzel';
+        grid-area: cancel;
+        position: absolute;
+        top: 85%;
+        left: 63%;
+        font-size: 6vw!important;
+        border-radius: 5px;
+        margin: 1vw;
+        cursor: pointer;
+        background: linear-gradient(to bottom right, rgba(248, 146, 146, 0.9), rgba(250, 215, 215, 0.8))
     }
 }
 .newTitle {
