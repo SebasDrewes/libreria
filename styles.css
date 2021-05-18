@@ -3,7 +3,12 @@
     box-sizing: border-box;
 }
 body {
-    background:#969292;
+    background: url("img/image.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    background-color: #464646;
     font-family: 'Roboto';
     margin: 0;
 }
@@ -14,7 +19,7 @@ body {
     border-bottom: black solid 2px;
     font-size: 10vh;
     color: rgb(255, 255, 255);
-    background: rgb(49 49 93);
+    background: rgba(2, 1, 41, 0.76);
     text-shadow: -3px 0 black, 0 3px black, 3px 0 black, 0 -3px black;
 }
 .agregarLibro {
@@ -27,7 +32,7 @@ body {
     height: 8vh;
     border-bottom: solid 2px;
     border-color: black;
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.76);
     color: rgb(255, 255, 255);
     text-shadow: -3px 0 black, 0 3px black, 3px 0 black, 0 -3px black;
     font-size: 6vh;
@@ -54,7 +59,7 @@ body {
     flex-direction: column;
     text-align: center;
     font-size: 4vh;
-    background: rgb(140 140 164);
+    background: rgba(2, 1, 41, 0.76);
     color: rgb(255, 255, 255);
     border: 2px solid rgb(0, 0, 0);
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
@@ -90,7 +95,7 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background: rgba(92, 92, 92, 0.975);
+    background: rgba(34, 33, 75, 0.89);
     overflow-y: hidden;
     transition: 0.3s;
     overflow: hidden;
@@ -207,7 +212,7 @@ body {
     border-top: solid 2px;
     border-bottom: solid 2px;
     border-color: black;
-    background-color:  black;
+    background-color: rgba(0, 0, 0, 0.76);
     color: rgb(255, 255, 255);
     text-shadow: -3px 0 black, 0 3px black, 3px 0 black, 0 -3px black;
 }
@@ -219,7 +224,7 @@ body {
     border-radius: 5px;
     transition: all 0.5s ease-in-out;
     color: rgb(255, 255, 255);
-    background: black;
+    background: rgba(0, 0, 0, 0.76);
     border-color: black;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
@@ -231,7 +236,7 @@ body {
     border-radius: 5px;
     transition: all 0.5s ease-in-out;
     color: rgb(255, 255, 255);
-    background: black;
+    background: rgba(0, 0, 0, 0.76);
     border-color: black;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
@@ -243,7 +248,7 @@ body {
     border-radius: 5px;
     transition: all 0.5s ease-in-out;
     color: rgb(255, 255, 255);
-    background: black;
+    background: rgba(0, 0, 0, 0.76);
     border-color: black;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 
@@ -258,7 +263,7 @@ body {
     border-color: rgb(0, 0, 0);
     color: rgb(255, 255, 255);
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-    background: black;
+    background: rgba(0, 0, 0, 0.76);
 }
 
 .nuevoLibro {
@@ -272,7 +277,7 @@ body {
     border-color: rgb(0, 0, 0);
     color: rgb(255, 255, 255);
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-    background: black;;
+    background: rgba(0, 0, 0, 0.76);
 }
 .cancel {
     font-family: 'Roboto';
@@ -285,7 +290,7 @@ body {
     border-color: rgb(0, 0, 0);
     color: rgb(255, 255, 255);
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-    background: black;
+    background: rgba(0, 0, 0, 0.76);
 }
 .faltaTitulo {
     grid-area: faltaTitulo;
