@@ -17,11 +17,13 @@ let myLibrary = [];
 window.onload = displayBooks();
 
 //object constructor
-function Book(title, author, pages, read) {
+class Book {
+    constructor(title, author, pages, read) {
     this.title = title 
     this.author = `de ${author}`
     this.pages = `${pages} paginas`
     this.read = read;
+}
 }
 //funcionalidad agregar libro a libreria
 function addBookToLibrary(){
