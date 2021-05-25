@@ -5,4 +5,4 @@ Realizado segun lo requerido en el proyecto: https://www.theodinproject.com/path
 
 Usando object constructors y manejo del DOM.
 
-Probala! https://github.com/SebasDrewes/libreria/deployments/activity_log?environment=github-pages
+Probala! https://sebasdrewes.github.io/libreria/
