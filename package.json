@@ -1,5 +1,27 @@
 {
   "dependencies": {
     "firebase": "^9.0.2"
+  },
+  "name": "libreria",
+  "description": "![image](https://user-images.githubusercontent.com/81722772/121596441-cf8a3f80-ca15-11eb-9c25-c758299b5248.png)",
+  "version": "1.0.0",
+  "main": "firebase-config.js",
+  "scripts": {
+    "build": "webpack --mode=development",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SebasDrewes/libreria.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SebasDrewes/libreria/issues"
+  },
+  "homepage": "https://github.com/SebasDrewes/libreria#readme",
+  "devDependencies": {
+    "webpack": "^5.52.1",
+    "webpack-cli": "^4.8.0"
   }
 }
