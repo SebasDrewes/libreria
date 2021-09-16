@@ -17,9 +17,6 @@ const db = getFirestore();
 
 // definicion array de libros
 let myLibrary = [];
-// continuar
-
-// https://firebase.google.com/docs/web/module-bundling?authuser=0
 
 // definicion de elementos DOM
 const nuevoLibro = document.querySelector('.nuevoLibro');
@@ -45,14 +42,9 @@ async function loadLibrary() {
     myLibrary = [];
   } else {
     myLibrary = storedLibrary.docs.map((libro) => libro.data());
-    console.log(myLibrary);
   }
 }
 
-// funcionalidad para filtrar libreria de nulls
-function removeNull(array) {
-  return array.filter((x) => x !== null);
-}
 // funcionalidad display libreria
 async function displayBooks() {
   // borra todos los libros anteriores para hacer todos nuevamente
@@ -90,12 +82,14 @@ async function displayBooks() {
         });
         readAgregado.style.cssText = 'background: rgba(0, 0, 0, 0.4);';
         readAgregado.textContent = 'No Leido';
+        loadLibrary();
       } else {
         await updateDoc(doc(db, 'myLibrary', myLibrary[i].title), {
           read: 'Leido',
         });
         readAgregado.style.cssText = 'background: rgba(2, 1, 41, 0);';
         readAgregado.textContent = 'Leido';
+        loadLibrary();
       }
     });
     // funcionalidad elimitar libro de libreria
