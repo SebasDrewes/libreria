@@ -1,6 +1,6 @@
 import { initializeApp } from 'firebase/app';
 import {
-  getFirestore, doc, getDocs, setDoc, collection,
+  getFirestore, doc, getDocs, setDoc, collection, deleteDoc,
 } from 'firebase/firestore';
 
 const firebaseConfig = {
@@ -99,10 +99,8 @@ async function displayBooks() {
     removeAgregado.classList.add('removeAgregado');
     removeAgregado.textContent = 'X';
     // eslint-disable-next-line no-loop-func
-    removeAgregado.addEventListener('click', () => {
-      delete myLibrary[i];
-      myLibrary = removeNull(myLibrary);
-      //  saveLibrary();
+    removeAgregado.addEventListener('click', async () => {
+      await deleteDoc(doc(db, 'myLibrary', myLibrary[i].title));
       displayBooks();
     });
     // construccion display
