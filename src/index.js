@@ -1,6 +1,6 @@
 import { initializeApp } from 'firebase/app';
 import {
-  getFirestore, doc, getDoc, setDoc,
+  getFirestore, doc, getDocs, setDoc, collection,
 } from 'firebase/firestore';
 
 const firebaseConfig = {
@@ -12,10 +12,8 @@ const firebaseConfig = {
   appId: '1:18438604171:web:f5095ea38af1595b2bdb8e',
 };
 
-const firebaseApp = initializeApp(firebaseConfig);
-
+initializeApp(firebaseConfig);
 const db = getFirestore();
-console.log(firebaseApp);
 
 // definicion array de libros
 let myLibrary = [];
@@ -42,23 +40,23 @@ async function saveBook(book, title) {
 }
 // funcionalidad cargar libreria de localStorage
 async function loadLibrary() {
-  /* const storedLibrary = await getDoc(doc(db, 'myLibrary', 'myLibrary'), JSON.parse(myLibrary));
+  const storedLibrary = await getDocs(collection(db, 'myLibrary'));
   if (storedLibrary === null) {
     myLibrary = [];
   } else {
-    myLibrary = storedLibrary;
+    myLibrary = storedLibrary.docs.map((libro) => libro.data());
     console.log(myLibrary);
-  } */
+  }
 }
-// saveLibrary();
+
 // funcionalidad para filtrar libreria de nulls
 function removeNull(array) {
   return array.filter((x) => x !== null);
 }
 // funcionalidad display libreria
-function displayBooks() {
+async function displayBooks() {
   // borra todos los libros anteriores para hacer todos nuevamente
-  loadLibrary();
+  await loadLibrary();
   while (libreria.firstChild) {
     libreria.removeChild(libreria.firstChild);
   }
