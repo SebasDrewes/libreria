@@ -1,6 +1,6 @@
 import { initializeApp } from 'firebase/app';
 import {
-  getFirestore, doc, getDocs, setDoc, collection, deleteDoc,
+  getFirestore, doc, getDocs, setDoc, collection, deleteDoc, updateDoc,
 } from 'firebase/firestore';
 
 const firebaseConfig = {
@@ -83,16 +83,20 @@ async function displayBooks() {
       readAgregado.style.cssText = 'background: rgba(0, 0, 0, 0.4);';
     }
     // eslint-disable-next-line no-loop-func
-    readAgregado.addEventListener('click', () => {
+    readAgregado.addEventListener('click', async () => {
       if (myLibrary[i].read === 'Leido') {
-        myLibrary[i].read = 'No Leido';
+        await updateDoc(doc(db, 'myLibrary', myLibrary[i].title), {
+          read: 'No Leido',
+        });
         readAgregado.style.cssText = 'background: rgba(0, 0, 0, 0.4);';
+        readAgregado.textContent = 'No Leido';
       } else {
-        myLibrary[i].read = 'Leido';
+        await updateDoc(doc(db, 'myLibrary', myLibrary[i].title), {
+          read: 'Leido',
+        });
         readAgregado.style.cssText = 'background: rgba(2, 1, 41, 0);';
+        readAgregado.textContent = 'Leido';
       }
-      readAgregado.textContent = myLibrary[i].read;
-      // saveLibrary();
     });
     // funcionalidad elimitar libro de libreria
     const removeAgregado = document.createElement('div');
